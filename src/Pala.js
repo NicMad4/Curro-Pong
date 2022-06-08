@@ -21,9 +21,22 @@ class Pala {
         this.x = this.x - 20;
       }
     }
+    
     if (key === "ArrowRight") {
       if (this.x < 400) {
         this.x = this.x + 20;
+      }
+    }
+    
+    if (key === "ArrowUp") {
+      if (this.y > 0) {
+        this.y = this.y - 20;
+      }
+    }
+    
+    if (key === "ArrowDown") {
+      if (this.y >= 0 && this.y <500) {
+        this.y = this.y + 20;
       }
     }
   }

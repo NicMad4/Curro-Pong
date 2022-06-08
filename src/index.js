@@ -13,16 +13,24 @@ let pala = new Pala(200, 500, 200, 100, palaImage);
 let pelota = new Pelota(100, 200, 30, 30, pelotaImage);
 
 const cargaInicial = () => {
-  pala.dibujar();
+pala.dibujar();
   pelota.dibujar();
-
+  
   const detectarColision = () => {
     if (pelota.y == 470) {
       if (pala.x < pelota.x && pala.x + pala.ancho > pelota.x) {
         pelota.direccionY = "arriba";
       }
     }
+    if(pelota.x == pala.x+pala.ancho&&pelota.y+pelota.alto>=500){
+      pelota.direccionX="derecha"
+    }
+    if(pelota.x+pelota.ancho == pala.x&&pelota.y+pelota.alto>=500){
+      pelota.direccionX="izquierda"
+    } 
   };
+
+
 
   const moverPelota = () => {
     pelota.borrar();

@@ -30,7 +30,7 @@ class Pelota {
     }
     if (this.y >= ctx.canvas.width - this.ancho) {
       this.direccionY = "arriba";
-      alert("game over");
+      
     }
     if (this.direccionX === "derecha") {
       this.x += 10;
